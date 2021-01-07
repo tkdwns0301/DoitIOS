@@ -11,81 +11,87 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ch15_CameraPhotoLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ch15_Collage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Os9-Dl-FVy">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TNk-Te-rvM">
                                 <rect key="frame" x="16" y="44" width="382" height="818"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6uj-Lw-yu0">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="738"/>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CUP-yp-dc7">
-                                        <rect key="frame" x="0.0" y="738" width="382" height="40"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PEd-nQ-miT">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="389"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3f-q5-iLv">
-                                                <rect key="frame" x="0.0" y="0.0" width="191" height="40"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Tg-b2-Zvh">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="389"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pCc-Em-lky">
+                                        <rect key="frame" x="0.0" y="389" width="382" height="389"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sTx-LH-HOW">
+                                                <rect key="frame" x="0.0" y="0.0" width="191" height="389"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Vf-es-rE1">
+                                                <rect key="frame" x="191" y="0.0" width="191" height="389"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PcK-zt-tK2">
+                                        <rect key="frame" x="0.0" y="778" width="382" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6u8-IQ-0h1">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="Rkm-8I-WuD"/>
+                                                    <constraint firstAttribute="height" constant="40" id="WeQ-L4-FEN"/>
                                                 </constraints>
                                                 <state key="normal" title="사진 촬영"/>
                                                 <connections>
-                                                    <action selector="btnCaptureImageFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jqq-pF-r8G"/>
+                                                    <action selector="btnCaptureImageFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ga-0R-yM8"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0k-bb-MHc">
-                                                <rect key="frame" x="191" y="0.0" width="191" height="40"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBh-1i-jUX">
+                                                <rect key="frame" x="127.5" y="0.0" width="127" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="bq8-j0-9p5"/>
-                                                </constraints>
-                                                <state key="normal" title="비디오 촬영"/>
-                                                <connections>
-                                                    <action selector="btnRecordVideoFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ieX-PL-2D4"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EXM-2N-u6m">
-                                        <rect key="frame" x="0.0" y="778" width="382" height="40"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOT-UF-HHE">
-                                                <rect key="frame" x="0.0" y="0.0" width="191" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="4cG-Ok-jIS"/>
+                                                    <constraint firstAttribute="height" constant="40" id="rTK-T5-LlR"/>
                                                 </constraints>
                                                 <state key="normal" title="사진 불러오기"/>
                                                 <connections>
-                                                    <action selector="btnLoadImageFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nws-iV-Sns"/>
+                                                    <action selector="btnLoadImageFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SCJ-Kj-6ct"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZN-Qo-UPu">
-                                                <rect key="frame" x="191" y="0.0" width="191" height="40"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdb-eV-JTD">
+                                                <rect key="frame" x="254.5" y="0.0" width="127.5" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="JhU-9P-rOz"/>
+                                                    <constraint firstAttribute="height" constant="40" id="hRw-QR-EUT"/>
                                                 </constraints>
-                                                <state key="normal" title="비디오 불러오기"/>
+                                                <state key="normal" title="초기화"/>
                                                 <connections>
-                                                    <action selector="btnLoadVideoFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ttV-IV-kEz"/>
+                                                    <action selector="btnResetImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HPY-cg-MVg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="pCc-Em-lky" firstAttribute="height" secondItem="PEd-nQ-miT" secondAttribute="height" id="2vr-gr-bEw"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Os9-Dl-FVy" secondAttribute="bottom" id="XUd-cy-kMg"/>
-                            <constraint firstItem="Os9-Dl-FVy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YyX-fg-J9K"/>
-                            <constraint firstItem="Os9-Dl-FVy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aLW-Hy-xA3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Os9-Dl-FVy" secondAttribute="trailing" constant="16" id="sYX-d9-vGV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TNk-Te-rvM" secondAttribute="trailing" constant="16" id="Ebg-uN-5Oq"/>
+                            <constraint firstItem="TNk-Te-rvM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PFu-PO-La5"/>
+                            <constraint firstItem="TNk-Te-rvM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QaY-NN-F6E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TNk-Te-rvM" secondAttribute="bottom" id="sZe-Dg-n9U"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imgView" destination="6uj-Lw-yu0" id="X6v-Mh-Xc9"/>
+                        <outlet property="imgViewOne" destination="2Tg-b2-Zvh" id="CQC-rS-gYX"/>
+                        <outlet property="imgViewThree" destination="0Vf-es-rE1" id="66T-5a-1Mt"/>
+                        <outlet property="imgViewTwo" destination="sTx-LH-HOW" id="vL5-bP-5JI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
